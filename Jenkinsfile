@@ -4,8 +4,8 @@ pipeline {
   }
 
   tools {
-    maven 'Maven3'
     jdk 'Java17'
+    maven 'Maven3'
   }
 
   stages {
@@ -17,9 +17,7 @@ pipeline {
         }
       }
     }
-  }
 
-  stages {
     stage('Checkout') {
       steps {
         git branch: 'main', credentialsId: 'github', url: 'https://github.com/phu-phurithat/complete-prodcution-e2e-pipeline'
